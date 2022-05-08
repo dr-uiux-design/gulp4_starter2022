@@ -10,6 +10,7 @@
     "fontTTF": "gulp fontTTF",
     "fontWoff": "gulp fontWoff",
     "fontWoff2": "gulp fontWoff2",
+    "fonts": "gulp fonts",
     "spriteSvg": "gulp spriteSvg",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build-zip"
