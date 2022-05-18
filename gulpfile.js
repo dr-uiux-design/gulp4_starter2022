@@ -46,6 +46,7 @@ export { scss }
 export { js }
 export { images }
 export { clean } // Удаление папки dist
+export { copy } // Копирование файлов и папок из папки src/files в корень фин. проекта
 export { spriteSvg } // Генерирование SVG Sprite
 
 // Генерация шрифтов в разные форматы
@@ -58,7 +59,7 @@ export { fontIcons } // перенос шрифтовых иконок в пап
 // fontWoff
 // fontWoff2
 
-const mainTasks = gulp.series(fontWoff2, fontIcons, gulp.parallel(copy, html, scss, js, images, spriteSvg));
+const mainTasks = gulp.series(fontIcons, gulp.parallel(copy, html, scss, js, images, spriteSvg));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
